@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+
+#container {
+    width: 470px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.disk {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translateX(0px);
+}
+
+.disk:active {
+    transform: translateX(400px);
+}
+
+#disk1 {
+    background-color: blue;
+    transition: transform 1s;
+}
+
+#disk2 {
+    background-color: blueviolet;
+    transition: transform linear 1s;
+}
+
+#disk3 {
+    background-color: orange;
+    transition: transform ease-in 1s;
+}
+
+#disk4 {
+    background-color: red;
+    transition: transform ease-out 1s;
+}
+
+#disk5 {
+    background-color: green;
+    transition: transform ease-in-out 1s;
+}
