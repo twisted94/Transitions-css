@@ -1,8 +1,15 @@
-* {
+:root { 
+    --speed: 1.5s; /* Variable for transition speed */
+}
+
+* { /* Styles all tags */
     margin: 0;
     box-sizing: border-box;
 }
 
+/*===================
+==== TAG STYLING ====
+===================*/
 body {
     display: flex;
     align-items: center;
@@ -13,15 +20,19 @@ body {
 p {
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 20px;
+    margin: 20px 0px;
 }
+/*==================*/
 
-#container {
+#container { /* STYLING THE CONTAINER FOR THE DISKS */
     width: 470px;
     border: 1px solid;
     padding: 10px;
 }
 
+/*======================================
+==== DISK & DISK TRANSITION STYLING ====
+======================================*/
 .disk {
     width: 30px;
     height: 30px;
@@ -33,27 +44,36 @@ p {
     transform: translateX(400px);
 }
 
+/*==== DISK TRANSITIONS ====*/
 #disk1 {
     background-color: blue;
-    transition: transform 1s;
+    transition: transform 2s;
 }
 
 #disk2 {
     background-color: blueviolet;
-    transition: transform linear 1s;
+    transition: transform linear var(--speed);
 }
 
 #disk3 {
     background-color: orange;
-    transition: transform ease-in 1s;
+    transition: transform ease-in var(--speed);
 }
 
 #disk4 {
     background-color: red;
-    transition: transform ease-out 1s;
+    transition: transform ease-out var(--speed);
 }
 
 #disk5 {
     background-color: green;
-    transition: transform ease-in-out 1s;
+    transition: transform ease-in-out var(--speed);
+}
+#disk6 {
+    background-color: pink;
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) var(--speed);
+}
+#disk7 {
+    background-color: coral;
+    transition: transform cubic-bezier(0.445, 0.05, 0.55, 0.95) var(--speed);
 }
